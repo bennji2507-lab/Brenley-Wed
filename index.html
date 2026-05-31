@@ -1,0 +1,182 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <title>Brendan & Linley | 13 March 2027</title>
+  <meta name="description" content="Brendan and Linley are getting married on 13 March 2027 at The Bell Tower Rooftop, Perth." />
+  <meta property="og:title" content="Brendan & Linley | We're Getting Married" />
+  <meta property="og:description" content="13 March 2027 — The Bell Tower Rooftop, Perth." />
+  <meta property="og:image" content="assets/bell-tower-hero.png" />
+  <link rel="stylesheet" href="styles.css" />
+</head>
+<body>
+  <div id="password-screen" class="password-screen">
+    <div class="password-card">
+      <div class="monogram">B<span>|</span>L</div>
+      <p class="eyebrow">Private Wedding Website</p>
+      <h1>Brendan & Linley</h1>
+      <p class="soft">Enter the guest password to view wedding details.</p>
+      <form id="password-form">
+        <input id="password-input" type="password" placeholder="Guest password" autocomplete="off" />
+        <button type="submit">Enter</button>
+      </form>
+      <p id="password-error" class="error"></p>
+      <p class="hint">Guest password: <strong>belltower</strong></p>
+    </div>
+  </div>
+
+  <main id="site" class="site hidden">
+    <nav class="nav">
+      <a href="#home" class="logo">B<span>|</span>L</a>
+      <button class="menu-button" onclick="document.body.classList.toggle('menu-open')" aria-label="Menu">☰</button>
+      <div class="nav-links">
+        <a href="#story">Our Story</a>
+        <a href="#experience">Experience</a>
+        <a href="#details">The Day</a>
+        <a href="#rsvp">RSVP</a>
+        <a href="#qa">Q&A</a>
+      </div>
+    </nav>
+
+    <header id="home" class="hero">
+      <div class="hero-overlay"></div>
+      <div class="hero-content">
+        <p class="eyebrow">We're getting married</p>
+        <h1>Brendan <em>and</em> Linley</h1>
+        <div class="divider"></div>
+        <p class="date">13 March 2027</p>
+        <p class="venue">The Bell Tower Rooftop<br>Perth, Western Australia</p>
+        <p class="intro">Together with Aubrey, we invite you to celebrate with us as we begin our next chapter.</p>
+        <a href="#rsvp" class="primary-btn">RSVP ♡</a>
+      </div>
+      <div class="countdown">
+        <div><strong id="days">000</strong><span>Days</span></div>
+        <div><strong id="hours">00</strong><span>Hours</span></div>
+        <div><strong id="minutes">00</strong><span>Mins</span></div>
+        <div><strong id="seconds">00</strong><span>Secs</span></div>
+      </div>
+    </header>
+
+    <section class="quick-info">
+      <article><span>♡</span><strong>13 March 2027</strong><p>Save the date</p></article>
+      <article><span>⌂</span><strong>The Bell Tower Rooftop</strong><p>Perth</p></article>
+      <article><span>◌</span><strong>50 guests</strong><p>Our closest family and friends</p></article>
+      <article><span>◊</span><strong>Cocktail / Formal</strong><p>Dress code</p></article>
+    </section>
+
+    <section id="story" class="section story family-section">
+      <div class="family-copy">
+        <p class="eyebrow">Our story</p>
+        <h2>The family we've created together.</h2>
+        <p>Some of life's best moments aren't planned.</p>
+        <p>What started as two people finding each other became something much bigger — a family. Over the years, we have built a life together filled with love, laughter, adventures, everyday moments and memories that mean the world to us.</p>
+        <p>Aubrey is such a special part of our story, and this wedding is not only about Brendan and Linley. It is about celebrating the family we have become, the people who have supported us, and the future we are building together.</p>
+        <p>On 13 March 2027, surrounded by the people who mean the most to us, we will be making it official. We cannot wait to share the day with you.</p>
+      </div>
+      <figure class="family-photo-wrap">
+        <img src="assets/price-family.jpg" alt="Brendan, Linley and Aubrey" />
+        <figcaption>Brendan, Linley & Aubrey</figcaption>
+      </figure>
+    </section>
+
+    <section id="experience" class="section experience">
+      <p class="eyebrow">What to expect</p>
+      <h2>A rooftop celebration with something a little different.</h2>
+      <div class="experience-grid">
+        <article>
+          <span>🍽</span>
+          <h3>Ginger Pear Grazing</h3>
+          <p>Gourmet grazing and cocktail-style dining by Ginger Pear Grazing.</p>
+        </article>
+        <article>
+          <span>🎵</span>
+          <h3>Live music</h3>
+          <p>Live music by Ricky Green throughout the evening.</p>
+        </article>
+        <article>
+          <span>🔔</span>
+          <h3>Bell ringing</h3>
+          <p>The bells will be ringing, with a private bell ringing demonstration and the chance for guests to ring the bells themselves.</p>
+        </article>
+        <article>
+          <span>🎆</span>
+          <h3>Fireworks</h3>
+          <p>Fireworks over the Swan River to finish the night in true rooftop style.</p>
+        </article>
+      </div>
+    </section>
+
+    <section id="details" class="section details">
+      <p class="eyebrow">The day</p>
+      <h2>Wedding details</h2>
+      <div class="cards">
+        <article><h3>Venue</h3><p>The Bell Tower Rooftop, Perth.</p></article>
+        <article><h3>Style</h3><p>Cocktail-style celebration with drinks, food, music and good company.</p></article>
+        <article><h3>Dress</h3><p>Cocktail / formal. Look sharp, feel comfortable, and be ready to celebrate.</p></article>
+        <article><h3>Guests</h3><p>An intimate celebration with a maximum of 50 of our closest family and friends.</p></article>
+      </div>
+    </section>
+
+    <section class="section timeline">
+      <p class="eyebrow">Schedule</p>
+      <h2>The plan for the evening</h2>
+      <div class="timeline-list">
+        <div><strong>4:30pm</strong><span>Guest arrival</span></div>
+        <div><strong>5:00pm</strong><span>Ceremony</span></div>
+        <div><strong>5:30pm</strong><span>Drinks, grazing and photos</span></div>
+        <div><strong>6:30pm</strong><span>Bell Tower experience</span></div>
+        <div><strong>7:00pm</strong><span>Live music and celebrations</span></div>
+        <div><strong>8:30pm</strong><span>Fireworks over the river</span></div>
+      </div>
+      <p class="small-note">Timing may be updated closer to the day.</p>
+    </section>
+
+    <section class="section aubrey">
+      <div>
+        <p class="eyebrow">Family</p>
+        <h2>A special part of our day</h2>
+        <p>Our family would not be complete without Aubrey. She will have a very special role in the day, and we cannot wait to celebrate this moment together.</p>
+      </div>
+    </section>
+
+    <section id="rsvp" class="section rsvp">
+      <p class="eyebrow">RSVP</p>
+      <h2>Let us know you are coming</h2>
+      <p class="rsvp-note">Please RSVP below. Responses will appear in Netlify Forms once the site is live.</p>
+      <form name="wedding-rsvp" method="POST" data-netlify="true" class="rsvp-form">
+        <input type="hidden" name="form-name" value="wedding-rsvp" />
+        <label>Your name<input name="name" required placeholder="Name" /></label>
+        <label>Email<input type="email" name="email" required placeholder="Email address" /></label>
+        <label>Will you be joining us?
+          <select name="attendance">
+            <option>Yes, cannot wait</option>
+            <option>Sadly cannot make it</option>
+          </select>
+        </label>
+        <label>Dietary requirements<textarea name="dietary" placeholder="Let us know anything important"></textarea></label>
+        <label>Song request<textarea name="song" placeholder="Give us one for the dance floor"></textarea></label>
+        <label>Message for us<textarea name="message" placeholder="Leave us a note"></textarea></label>
+        <button type="submit">Submit RSVP</button>
+      </form>
+    </section>
+
+    <section id="qa" class="section qa">
+      <p class="eyebrow">Q & A</p>
+      <h2>Good to know</h2>
+      <details><summary>Can I bring a plus one?</summary><p>Due to the intimate size of the venue, we are keeping the guest list to those named on the invitation.</p></details>
+      <details><summary>Are children invited?</summary><p>We will confirm this directly with families once the final guest list is locked in.</p></details>
+      <details><summary>What should I wear?</summary><p>Cocktail / formal. The setting is rooftop and riverside, so dress for a beautiful evening out.</p></details>
+      <details><summary>Will guests be able to ring the bells?</summary><p>Yes. We are planning a bell ringing demonstration with an opportunity for guests to ring the bells themselves.</p></details>
+      <details><summary>Will there be fireworks?</summary><p>Yes, fireworks are planned over the Swan River as part of the celebration.</p></details>
+    </section>
+
+    <footer>
+      <p class="script">We can't wait to celebrate with you.</p>
+      <p>Brendan, Linley & Aubrey</p>
+    </footer>
+  </main>
+
+  <script src="script.js"></script>
+</body>
+</html>

@@ -1,0 +1,357 @@
+@import url('https://fonts.googleapis.com/css2?family=Cormorant+Garamond:wght@400;500;600;700&family=Inter:wght@300;400;500;600&family=Parisienne&display=swap');
+
+:root {
+  --ivory: #f6efe6;
+  --champagne: #c7a56a;
+  --charcoal: #11100f;
+  --sand: #e8d8c2;
+  --soft: #756b61;
+  --white: #fffaf3;
+}
+
+* { box-sizing: border-box; }
+html { scroll-behavior: smooth; }
+body {
+  margin: 0;
+  background: var(--ivory);
+  color: var(--charcoal);
+  font-family: Inter, sans-serif;
+}
+.hidden { display: none !important; }
+
+.password-screen {
+  min-height: 100vh;
+  display: grid;
+  place-items: center;
+  padding: 24px;
+  background:
+    linear-gradient(rgba(15,14,12,.58), rgba(15,14,12,.72)),
+    url('assets/bell-tower-hero.png') center/cover;
+}
+.password-card {
+  width: min(460px, 100%);
+  padding: 42px;
+  border-radius: 30px;
+  background: rgba(255,250,243,.86);
+  box-shadow: 0 30px 90px rgba(0,0,0,.34);
+  text-align: center;
+  backdrop-filter: blur(16px);
+}
+.monogram, .logo {
+  font-family: "Cormorant Garamond", serif;
+  color: var(--champagne);
+  letter-spacing: .08em;
+}
+.monogram { font-size: 44px; }
+.monogram span, .logo span { opacity: .6; margin: 0 7px; }
+.password-card h1 {
+  font-family: "Cormorant Garamond", serif;
+  font-size: 52px;
+  margin: 12px 0;
+}
+.password-card form { display: grid; gap: 12px; margin-top: 26px; }
+input, select, textarea {
+  width: 100%;
+  border: 1px solid rgba(30,25,20,.18);
+  border-radius: 16px;
+  padding: 14px 16px;
+  font: inherit;
+  background: rgba(255,255,255,.9);
+}
+textarea { min-height: 110px; resize: vertical; }
+button, .primary-btn {
+  border: none;
+  cursor: pointer;
+  border-radius: 999px;
+  padding: 15px 28px;
+  background: linear-gradient(135deg, #d4b77d, #b18c4c);
+  color: white;
+  text-decoration: none;
+  text-transform: uppercase;
+  letter-spacing: .18em;
+  font-weight: 600;
+  box-shadow: 0 18px 40px rgba(0,0,0,.22);
+}
+.error { color: #9b2c2c; min-height: 20px; }
+.hint { color: var(--soft); font-size: 13px; }
+.soft { color: var(--soft); }
+
+.nav {
+  position: fixed;
+  z-index: 20;
+  top: 0;
+  width: 100%;
+  padding: 22px clamp(20px, 5vw, 70px);
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  background: linear-gradient(to bottom, rgba(0,0,0,.58), transparent);
+}
+.logo { font-size: 36px; text-decoration: none; }
+.nav-links { display: flex; gap: 30px; }
+.nav a {
+  color: white;
+  text-decoration: none;
+  font-size: 12px;
+  letter-spacing: .18em;
+  text-transform: uppercase;
+}
+.menu-button { display: none; background: transparent; box-shadow: none; padding: 0; font-size: 28px; }
+
+.hero {
+  min-height: 100vh;
+  position: relative;
+  display: grid;
+  place-items: center;
+  text-align: center;
+  overflow: hidden;
+  background:
+    linear-gradient(rgba(14,12,10,.28), rgba(14,12,10,.50)),
+    url('assets/bell-tower-hero.png') center/cover;
+  color: white;
+}
+.hero::after {
+  content: "";
+  position: absolute;
+  inset: 0;
+  background: radial-gradient(circle at 50% 36%, rgba(255,255,255,.03), rgba(0,0,0,.30) 55%, rgba(0,0,0,.78));
+}
+.hero-overlay {
+  position: absolute;
+  inset: 0;
+  background: linear-gradient(to top, rgba(0,0,0,.80), rgba(0,0,0,.08) 55%, rgba(0,0,0,.18));
+}
+.hero-content {
+  position: relative;
+  z-index: 2;
+  width: min(920px, calc(100% - 30px));
+  padding: 130px 0 168px;
+  text-shadow: 0 8px 30px rgba(0,0,0,.48);
+}
+.eyebrow {
+  text-transform: uppercase;
+  letter-spacing: .35em;
+  font-size: 13px;
+  color: var(--champagne);
+  font-weight: 600;
+}
+.hero h1 {
+  font-family: "Cormorant Garamond", serif;
+  font-size: clamp(68px, 12vw, 150px);
+  line-height: .86;
+  margin: 22px 0 14px;
+  font-weight: 500;
+  text-transform: uppercase;
+}
+.hero h1 em {
+  display: block;
+  font-family: Parisienne, cursive;
+  font-size: clamp(46px, 7vw, 78px);
+  text-transform: none;
+  color: var(--champagne);
+  font-weight: 400;
+  margin: 14px 0;
+}
+.divider { width: 170px; height: 1px; background: var(--champagne); margin: 22px auto; }
+.date {
+  color: var(--champagne);
+  font-family: "Cormorant Garamond", serif;
+  font-size: 36px;
+  letter-spacing: .12em;
+  margin: 0;
+}
+.venue { text-transform: uppercase; letter-spacing: .16em; line-height: 1.8; }
+.intro {
+  max-width: 650px;
+  margin: 22px auto 32px;
+  font-family: "Cormorant Garamond", serif;
+  font-style: italic;
+  font-size: 25px;
+  line-height: 1.35;
+}
+.countdown {
+  position: absolute;
+  z-index: 3;
+  left: 50%;
+  bottom: 0;
+  transform: translateX(-50%);
+  width: min(780px, calc(100% - 28px));
+  display: grid;
+  grid-template-columns: repeat(4, 1fr);
+  background: rgba(6,6,6,.82);
+  backdrop-filter: blur(9px);
+  border-radius: 28px 28px 0 0;
+  overflow: hidden;
+}
+.countdown div { padding: 20px 10px; border-right: 1px solid rgba(255,255,255,.17); }
+.countdown div:last-child { border-right: none; }
+.countdown strong {
+  display: block;
+  color: var(--champagne);
+  font-family: "Cormorant Garamond", serif;
+  font-size: clamp(34px, 6vw, 52px);
+  line-height: 1;
+}
+.countdown span { font-size: 12px; text-transform: uppercase; letter-spacing: .16em; }
+
+.quick-info { display: grid; grid-template-columns: repeat(4, 1fr); gap: 1px; background: rgba(21,20,18,.12); padding: 1px; }
+.quick-info article { background: var(--ivory); padding: 32px 28px; text-align: center; }
+.quick-info span { color: var(--champagne); font-size: 34px; display: block; margin-bottom: 10px; }
+.quick-info strong { display: block; margin-bottom: 5px; }
+.quick-info p { margin: 0; color: var(--soft); }
+
+.section { padding: 92px clamp(22px, 6vw, 90px); }
+.section h2 {
+  font-family: "Cormorant Garamond", serif;
+  font-size: clamp(44px, 7vw, 76px);
+  line-height: .95;
+  margin: 12px 0 32px;
+  font-weight: 500;
+}
+.story p, .aubrey p, .rsvp-note, .experience p, .small-note { color: var(--soft); font-size: 19px; line-height: 1.8; }
+
+.family-section {
+  display: grid;
+  grid-template-columns: 1fr minmax(300px, 560px);
+  gap: 48px;
+  align-items: center;
+}
+.family-copy { max-width: 760px; }
+.family-photo-wrap {
+  margin: 0;
+  border-radius: 34px;
+  overflow: hidden;
+  background: var(--charcoal);
+  box-shadow: 0 28px 80px rgba(20,18,15,.22);
+}
+.family-photo-wrap img {
+  width: 100%;
+  display: block;
+  aspect-ratio: 4 / 3;
+  object-fit: cover;
+}
+.family-photo-wrap figcaption {
+  color: var(--champagne);
+  padding: 18px 24px;
+  font-family: "Cormorant Garamond", serif;
+  font-size: 26px;
+  text-align: center;
+}
+
+.experience {
+  background:
+    linear-gradient(rgba(17,16,15,.86), rgba(17,16,15,.9)),
+    url('assets/bell-tower-hero.png') center/cover fixed;
+  color: white;
+}
+.experience h2 { max-width: 980px; }
+.experience-grid {
+  display: grid;
+  grid-template-columns: repeat(4, 1fr);
+  gap: 18px;
+}
+.experience-grid article {
+  background: rgba(255,255,255,.08);
+  border: 1px solid rgba(255,255,255,.14);
+  border-radius: 30px;
+  padding: 30px;
+  backdrop-filter: blur(8px);
+}
+.experience-grid span { font-size: 36px; }
+.experience-grid h3 {
+  font-family: "Cormorant Garamond", serif;
+  font-size: 31px;
+  margin: 20px 0 12px;
+}
+.experience-grid p { color: rgba(255,255,255,.72); }
+
+.cards { display: grid; grid-template-columns: repeat(4, 1fr); gap: 18px; }
+.cards article {
+  background: rgba(255,250,243,.72);
+  border: 1px solid rgba(30,25,20,.08);
+  border-radius: 28px;
+  padding: 28px;
+  box-shadow: 0 22px 60px rgba(20,18,15,.06);
+}
+.cards h3 { font-family: "Cormorant Garamond", serif; font-size: 30px; margin: 0 0 12px; }
+.cards p { color: var(--soft); line-height: 1.7; }
+
+.timeline { background: #efe3d4; }
+.timeline-list {
+  max-width: 860px;
+  border-top: 1px solid rgba(30,25,20,.14);
+}
+.timeline-list div {
+  display: grid;
+  grid-template-columns: 130px 1fr;
+  gap: 24px;
+  padding: 22px 0;
+  border-bottom: 1px solid rgba(30,25,20,.14);
+}
+.timeline-list strong {
+  color: var(--champagne);
+  font-family: "Cormorant Garamond", serif;
+  font-size: 30px;
+}
+.timeline-list span {
+  font-size: 20px;
+  align-self: center;
+}
+
+.aubrey {
+  background:
+    linear-gradient(rgba(18,16,14,.72), rgba(18,16,14,.76)),
+    url('assets/price-family.jpg') center/cover;
+  color: white;
+}
+.aubrey div { max-width: 750px; }
+.aubrey p { color: rgba(255,255,255,.82); }
+
+.rsvp { background: #f6efe6; }
+.rsvp-form { display: grid; gap: 18px; max-width: 720px; }
+.rsvp-form label { display: grid; gap: 8px; font-weight: 600; color: #3b342d; }
+.rsvp-form button { width: fit-content; margin-top: 10px; }
+
+.qa details { border-top: 1px solid rgba(30,25,20,.14); padding: 20px 0; max-width: 850px; }
+.qa summary { cursor: pointer; font-family: "Cormorant Garamond", serif; font-size: 30px; }
+.qa details p { color: var(--soft); line-height: 1.7; }
+
+footer { background: var(--charcoal); color: white; text-align: center; padding: 50px 20px; }
+.script { font-family: Parisienne, cursive; color: var(--champagne); font-size: 36px; margin: 0 0 16px; }
+
+@media (max-width: 980px) {
+  .experience-grid, .cards { grid-template-columns: repeat(2, 1fr); }
+  .family-section { grid-template-columns: 1fr; }
+}
+@media (max-width: 850px) {
+  .nav { padding: 18px 24px; }
+  .nav-links { display: none; }
+  .menu-button { display: block; color: white; }
+  .menu-open .nav-links {
+    display: grid;
+    position: absolute;
+    right: 18px;
+    top: 68px;
+    background: rgba(15,15,15,.92);
+    padding: 20px;
+    border-radius: 20px;
+  }
+  .quick-info, .cards, .experience-grid { grid-template-columns: 1fr; }
+  .hero {
+    background-position: center top;
+    min-height: 100svh;
+  }
+  .hero-content {
+    padding: 112px 0 160px;
+    width: min(100% - 36px, 680px);
+  }
+  .hero h1 { font-size: clamp(66px, 17vw, 92px); }
+  .hero h1 em { font-size: clamp(44px, 12vw, 64px); }
+  .date { font-size: 32px; }
+  .intro { font-size: 22px; }
+  .countdown { width: 100%; border-radius: 0; }
+  .countdown div { padding: 16px 6px; }
+  .section { padding: 70px 22px; }
+  .password-card { padding: 30px 22px; }
+  .timeline-list div { grid-template-columns: 1fr; gap: 4px; }
+}
